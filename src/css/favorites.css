@@ -35,8 +35,8 @@ body.dark-theme {
   padding: 14px 18px;
   border-radius: 15px;
   background: none;
-  border: 1px solid rgba(5, 5, 5, 0.1);
-  color: rgba(5, 5, 5, 0.3);
+  border: 1px solid var(--description-color);
+  color: var(--description-color);
   font-family: inherit;
   font-size: 14px;
   line-height: 1.29;
@@ -51,7 +51,13 @@ body.dark-theme {
 .fav-category-btn:focus,
 .fav-category-btn:active {
   background-color: var(--btn-color);
-  color: var(--secondary-color);
+  color: var(--description-color);
+}
+
+.fav-category-btn.is-active {
+  background-color: var(--color-primary);
+  color: var(--btn-color);
+  border-color: var(--color-primary);
 }
 
 .fav-recipes-list {

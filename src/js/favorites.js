@@ -84,7 +84,7 @@ function createCategories(recipes) {
   categoryRecipeList.innerHTML = '';
   categoryRecipeList.insertAdjacentHTML(
     'beforeend',
-    `<button type="button" class="all-category-btn fav-category-btn">All categories</button>`
+    `<button type="button" class="all-category-btn fav-category-btn is-active">All categories</button>`
   );
 
   const markup = categories
@@ -98,6 +98,12 @@ function createCategories(recipes) {
 
 categoryRecipeList.addEventListener('click', e => {
   if (!e.target.classList.contains('fav-category-btn')) return;
+
+  document
+    .querySelectorAll('.fav-category-btn')
+    .forEach(btn => btn.classList.remove('is-active'));
+
+  e.target.classList.add('is-active');
 
   const category = e.target.textContent;
 

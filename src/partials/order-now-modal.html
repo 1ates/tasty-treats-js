@@ -1,0 +1,78 @@
+<div
+  class="modal-overlay backdrop is-hidden"
+  data-modal-id="order-now"
+  id="modal"
+>
+  <div
+    class="modal order-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modal-title"
+  >
+    <button
+      class="modal-close"
+      type="button"
+      data-modal-close
+      aria-label="Close modal"
+    >
+      &times;
+    </button>
+
+    <h2 class="modal-title" id="modal-title">Order Now</h2>
+
+    <form class="modal-form order-form" id="order-form">
+      <label for="name" class="modal-label">
+        Name
+        <input
+          class="modal-input order-form-input name-form-valid input-js"
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Name Surname"
+          required
+          pattern="[A-Za-zА-Яа-яЁёІіЇїЄє\s]+$"
+        />
+      </label>
+
+      <label for="phone" class="modal-label">
+        Phone number
+        <input
+          class="modal-input order-form-input phone-form-valid input-js"
+          type="tel"
+          id="phone"
+          name="phone"
+          pattern="^\+90\d{10}$"
+          required
+          placeholder="+905551112233"
+          maxlength="13"
+        />
+      </label>
+
+      <label for="email" class="modal-label">
+        Email
+        <input
+          class="modal-input order-form-input email-form-valid input-js"
+          type="email"
+          id="email"
+          name="email"
+          placeholder="contact@ates.gov.tr"
+          required
+        />
+      </label>
+
+      <label for="comment" class="modal-label">
+        Comment
+        <textarea
+          class="modal-textarea"
+          name="comment"
+          id="comment"
+          rows="4"
+        ></textarea>
+      </label>
+
+      <button class="modal-submit submit-btn" type="submit" disabled>
+        Send
+      </button>
+    </form>
+  </div>
+</div>

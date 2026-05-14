@@ -6,8 +6,9 @@ import SortCss from 'postcss-sort-media-queries';
 
 export default defineConfig(({ command }) => {
   return {
+    base: '/tasty-treats-js/',
     define: {
-      [command === 'serve' ? 'global' : '_global']: {},
+      global: 'window',
     },
     root: 'src',
     build: {
@@ -34,7 +35,7 @@ export default defineConfig(({ command }) => {
           },
         },
       },
-      outDir: '../dist',
+      outDir: './dist',
       emptyOutDir: true,
     },
     plugins: [
